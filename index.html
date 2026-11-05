@@ -4,9 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- TODO: Change the title and description to your own -->
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Personal portfolio of Your Name — student, builder, problem solver." />
+  <title>Cheng Yu | FinTech Student</title>
+  <meta name="description" content="Cheng Yu is a Year 1 Financial Technology student at Republic Polytechnic who builds things at the intersection of finance and technology." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cheng Yu | FinTech Student" />
+  <meta property="og:description" content="FinTech student who builds things. Explore Cheng Yu's projects and work." />
+  <meta property="og:image" content="https://your-domain.example/assets/images/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
@@ -15,30 +19,84 @@
 
   <!-- ============ NAVIGATION ============ -->
   <header class="site-header">
-    <nav class="nav container">
-      <a href="#" class="nav-logo">YN</a>
-      <ul class="nav-links">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="nav-logo" aria-label="Cheng Yu, home">
+        <span class="nav-monogram" data-content="monogram">CY</span>
+        <span data-content="name">Cheng Yu</span>
+      </a>
+      <button class="nav-menu-toggle" id="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="command-trigger" id="command-trigger" type="button" aria-label="Open command palette">
+        <span aria-hidden="true">⌕</span>
+        <kbd id="command-shortcut">⌘ K</kbd>
+      </button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
     </nav>
   </header>
 
-  <main>
+  <dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
+    <div class="command-dialog-header">
+      <h2 id="command-title">Quick navigation</h2>
+      <button class="command-close" id="command-close" type="button" aria-label="Close command palette">×</button>
+    </div>
+    <label class="visually-hidden" for="command-search">Search commands</label>
+    <input class="command-search" id="command-search" type="search" placeholder="Where would you like to go?" autocomplete="off" />
+    <ul class="command-list" id="command-list"></ul>
+    <p class="command-hint">Use <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> to open · <kbd>Esc</kbd> to close</p>
+  </dialog>
+
+  <main id="top">
 
     <!-- ============ HERO ============ -->
-    <section class="hero container">
-      <p class="hero-greeting">Hi, I'm</p>
-      <!-- TODO: Put your name here -->
-      <h1 class="hero-name">Your Name</h1>
-      <!-- TODO: One line about who you are -->
-      <p class="hero-tagline">Student developer who likes building things on the web.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See my work</a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
+    <section class="hero container" aria-labelledby="hero-name">
+      <div class="hero-copy">
+        <p class="hero-greeting"><span class="status-dot" aria-hidden="true"></span><span data-content="eyebrow">FINTECH STUDENT · SINGAPORE</span></p>
+        <h1 class="hero-name" id="hero-name">Cheng Yu<span class="hero-period">.</span></h1>
+        <p class="hero-tagline" data-content="tagline">FinTech student who builds things.</p>
+        <p class="hero-intro" data-content="intro">Year 1 student at Republic Polytechnic, open to opportunities in FinTech, finance, and tech.</p>
+        <form class="hero-search" role="search">
+          <label class="visually-hidden" for="portfolio-search">Search projects and skills</label>
+          <span class="hero-search-icon" aria-hidden="true">⌕</span>
+          <input id="portfolio-search" type="search" placeholder="Search my work..." autocomplete="off" aria-controls="projects skills" />
+          <kbd>↵</kbd>
+        </form>
+        <p class="search-status" id="search-status" aria-live="polite"></p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><span data-content="projectsCta">View projects</span> <span aria-hidden="true">↗</span></a>
+          <a href="#contact" class="btn btn-outline" data-content="contactCta">Contact me</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Education">
+        <div class="hero-card-top">
+          <span class="hero-card-label">CURRENTLY</span>
+          <span class="hero-card-mark" aria-hidden="true">✳</span>
+        </div>
+        <p class="hero-card-program" data-content="program">Diploma in Financial Technology</p>
+        <div class="hero-card-bottom">
+          <span data-content="school">Republic Polytechnic</span>
+          <span>YEAR 1 <span aria-hidden="true">·</span> SG</span>
+        </div>
+        <div class="hero-card-orbit" aria-hidden="true"></div>
+        <div class="hero-card-orbit hero-card-orbit-inner" aria-hidden="true"></div>
+        <span class="hero-card-spark" aria-hidden="true">✳</span>
+      </aside>
+      <div class="interest-ticker" aria-label="Areas of interest: FinTech, finance, and technology">
+        <span class="ticker-label">EXPLORING</span>
+        <div class="ticker-window" aria-hidden="true">
+          <div class="ticker-track">
+            <span>FINTECH <i>✳</i> FINANCE <i>✳</i> TECHNOLOGY <i>✳</i> FINTECH <i>✳</i> FINANCE <i>✳</i> TECHNOLOGY <i>✳</i></span>
+            <span>FINTECH <i>✳</i> FINANCE <i>✳</i> TECHNOLOGY <i>✳</i> FINTECH <i>✳</i> FINANCE <i>✳</i> TECHNOLOGY <i>✳</i></span>
+          </div>
+        </div>
+        <span class="ticker-now"><span class="ticker-pulse"></span>OPEN TO INTERNSHIPS</span>
       </div>
     </section>
 
@@ -131,6 +189,7 @@
     <p>© <span id="year"></span> Your Name. Built during the Vibe Code Your Portfolio workshop.</p>
   </footer>
 
+  <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F6F7F4"/>
+  <circle cx="1010" cy="315" r="290" fill="#D7ED9C" fill-opacity=".72"/>
+  <circle cx="1010" cy="315" r="216" stroke="#087F72" stroke-opacity=".4" stroke-width="2"/>
+  <ellipse cx="1010" cy="315" rx="290" ry="118" transform="rotate(-32 1010 315)" stroke="#087F72" stroke-opacity=".48" stroke-width="2"/>
+  <rect x="82" y="82" width="56" height="56" rx="18" fill="#087F72"/>
+  <text x="110" y="118" fill="white" font-family="Arial, sans-serif" font-size="21" font-weight="700" text-anchor="middle">CY</text>
+  <text x="82" y="255" fill="#087F72" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">FINTECH STUDENT · SINGAPORE</text>
+  <text x="76" y="365" fill="#172321" font-family="Arial, sans-serif" font-size="100" font-weight="700" letter-spacing="-7">Cheng Yu.</text>
+  <text x="82" y="430" fill="#63716D" font-family="Arial, sans-serif" font-size="34">FinTech student who builds things.</text>
+  <text x="82" y="548" fill="#172321" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">REPUBLIC POLYTECHNIC · DIPLOMA IN FINANCIAL TECHNOLOGY</text>
+</svg>
